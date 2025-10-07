@@ -2,5 +2,4 @@
 ## Supervisor: Dr. Aly Fathy
 
 ![alt text](img/TitlePage.png)
-![alt text](img/Members.png)
 

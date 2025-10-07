@@ -1,3 +1,6 @@
 # Intelligent Reconfigurable Surfaces Graduate Research Project : Phase-2
-## Dr. Aly Fathy
+## Supervisor: Dr. Aly Fathy
+
+![alt text](img/TitlePage.png)
+![alt text](img/Members.png)
 

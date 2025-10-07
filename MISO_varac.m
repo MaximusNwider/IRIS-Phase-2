@@ -109,9 +109,12 @@ R_ESR_x = 1./(w*Cvar_x*Qx);
 R_ESR_y = 1./(w*Cvar_y*Qy);
 
 % Varactor impedances
-Zvar_x = R_ESR_x + 1i*w*Ls + 1./(1i*w*Cvar_x);
-Zvar_y = R_ESR_y + 1i*w*Ls + 1./(1i*w*Cvar_y);
+%Zvar_x = R_ESR_x + 1i*w*Ls + 1./(1i*w*Cvar_x);
+%Zvar_y = R_ESR_y + 1i*w*Ls + 1./(1i*w*Cvar_y);
 
+f = linspace(3.3e9, 3.7e9, 401);
+Zvar_x = Zvar(f, 10.0);     % use SMV1408 @ 10 V
+Zvar_y = Zvar(f,  2.5);     % use SMV1408 @ 2.5 V
 
 % s2p compatibility
 Zvar = @(f,V) model.fnZ(f, V);  

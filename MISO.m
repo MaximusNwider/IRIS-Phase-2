@@ -28,8 +28,8 @@ Qx_nom = 60;             % placeholder Q(Vx,f); replace with measured Q
 Qy_nom = 60;             % placeholder Q(Vy,f)
 
 % 1-bit biases (publication)
-Vy    = 10.0;            % V (x-pol branch)
-Vx    =  2.5;            % V (y-pol branch)
+Vx    = 10.0;            % V (x-pol branch)
+Vy    =  2.5;            % V (y-pol branch)
 
 % -------- Geometry (SET to Table I for exact replication) --------
 % Parasitic patches (per axis)
@@ -157,7 +157,7 @@ Ryy   = ((Zyy-eta2).*(Zxx+eta1) - Zyx.*Zxy) ./ Delta;
 Rmat  = [Rxx, Rxy; Ryx, Ryy];
 
 %% 3) Numeric sweep and eigenvalue plot (3.3–3.7 GHz)
-fvec = linspace(3.3e9, 3.7e9, 401);
+fvec = linspace(3.3e9, 3.8e9, 401);
 lam1 = zeros(size(fvec));
 lam2 = zeros(size(fvec));
 
@@ -181,6 +181,6 @@ plot(fvec/1e9, lam2_dB, 'LineWidth',1.8);
 grid on; box on;
 xlabel('Frequency (GHz)');
 ylabel('Eigenvalue magnitude (dB)');
-ylim([-0.7 0.1]);
+ylim([-40 0.1]);
 title('Eigenvalues of Reflectivity Matrix, broadside (V_x=10 V, V_y=2.5 V)');
 legend('|\lambda_1(\mathbf{R})|','|\lambda_2(\mathbf{R})|','Location','best');
